@@ -1,0 +1,160 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 5px;
+}
+
+
+.container-1{
+    display: flex;
+    direction: rtl;
+    background-color: rgb(78, 78, 78);
+    border-radius: 2px;
+    height: 50px;
+    margin: 1px;
+}
+.container-1-item{
+    height: 50px;
+    cursor: pointer;
+}
+
+
+.container-2{
+    display: flex;
+
+}
+.container-2-item-main{
+    flex: 3;
+    order: 2;
+}
+.container-2-item-right{
+    flex: 1;
+    order: 3;
+}
+.container-2-item-left{
+    flex: 1;
+    order: 1;
+}
+
+.container-3{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 10px 0;
+}
+
+.container-3-item{
+    max-height: 140px;
+    max-width: 140px;
+    flex-basis: 17%;
+}
+.container-2 div, .container-3 div{
+    border:1px #ccc solid;
+    padding: 10px;
+}
+
+.font {
+    margin: 1px 20px 1px 1px;
+    direction: rtl;
+    text-align: right;
+    text-justify: newspaper ; 
+    font-family: 'b nazanin';
+    font-size: 25px;
+    color: white;
+    
+    /*
+    background: rgb(43, 41, 41);
+    border-left: 5px  solid rgb(133, 143, 228);
+    border-top: 5px  solid rgb(133, 143, 228);
+    border-bottom: 5px  solid rgb(133, 143, 228);
+    */
+}
+a:hover{  
+    background: rgba(0, 0, 0, 0.582); 
+}
+
+.textBoxmenu{
+    width: 5%;
+    font-size: 25px;
+    line-height: 50px;
+    font-family: 'b nazanin';
+    color: white;
+    margin: 1px 10px 1px 1px;
+}
+.theme{
+    background: rgb(0, 0, 0);
+}
+
+/* ////////////////////////////////////// page1 ///////////////////////////////////////*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(29, 29, 29);
+}
+
+.contain {
+    display: flex;
+    direction: rtl;
+    background-color: yellowgreen;
+    min-height: 100vh;
+    width: 100%; max-width: 1400px; margin: 0 auto;
+}
+
+
+
+header-page1 {
+    background-color: #456;
+    color: #EEE;
+    flex: 0 0 300px;
+    border: 4px solid #222;
+}
+
+main {
+    background-color: #478;
+    color: #EEE;
+    flex: 1 0 ;
+    display: flex;
+    flex-flow:row wrap;
+}
+
+.mainblocks {
+    background-color: #FFC;
+    border: 4px solid #222;
+    min-height: 250px;
+    flex: 1 0 50%;
+}
+
+.imagebox{
+    max-width: 100%;
+    min-width: 300px;
+    min-height: 300px;
+    max-height: 100%;
+    align-self: center;
+}
+footer {
+    background-color: orange;
+    border: 4px solid #222;
+    min-height: 250px;
+    flex: 1 0 auto;
+}
+
+/* tablet */
+@media screen and (max-width: 1000px) {
+    .contain {
+        flex-direction: column;
+    }
+}
+
+/* phone */
+@media screen and (max-width: 700px) {
+    .box5, .box6 {
+        display: none;
+    }
+}
