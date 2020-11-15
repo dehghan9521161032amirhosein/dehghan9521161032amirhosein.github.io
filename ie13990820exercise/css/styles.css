@@ -1,0 +1,135 @@
+body {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px auto 200px;
+    grid-gap: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.grid-container div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+.grid-header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
+.grid-left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.grid-main{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+}
+
+.grid-right{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.grid-footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+
+}
+
+.grid-in-row-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(85, 10, 10, 0.8);
+    align-items: center;
+
+}
+.grid-in-row-item{
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.font-style-1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.image-style-1 {
+    max-width: 80%;
+    padding: 5px;
+}
+
+.image-style-2 {
+    max-width: 140px;
+    padding: 5px;
+}
+
+/*########################################################*/
+.container-page2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 150px;
+    grid-auto-flow: row;
+}
+
+.container-page2 div {
+    background-color: rgb(43, 146, 160);
+    text-align: center;    
+}
+
+.horizontal {
+    grid-column:  span 2;
+    align-items: center;
+    padding: 5px;
+    background-color: lawngreen !important;
+}
+
+.vertical {
+    grid-row: span 2;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(177, 40, 40) !important;
+}
+
+.big {
+    grid-column:  span 2;
+    grid-row: span 2;
+    padding: 5px;
+    background-color: rgb(255, 0, 157) !important;
+
+}
+/* tablet */
+@media screen and (max-width: 1000px) {
+    .container-page2 {
+        grid-auto-flow: dense;
+    }
+    .grid-container{
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 40px auto 100px;
+        grid-gap: 5px;
+    }
+}
+
+/* phone */
+@media screen and (max-width: 700px) {
+    .big {
+        grid-column:  span 1;
+        grid-row:  span 1;
+    }
+}
